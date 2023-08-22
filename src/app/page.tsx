@@ -2,7 +2,7 @@
 import { useContext } from "react";
 import { About } from "./components/home/About";
 import { Introduction } from "./components/home/Introduction";
-import { Pinned } from "./components/home/Pinned";
+import { Projects } from "./components/home/Projects";
 import { ThemeContext } from "./ContextProvider";
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
     <main className={`${theme} px-6 py-10 space-y-16 text-primary bg-secondary`}>
       <Introduction />
       <About />
-      <Pinned />
+      <Projects />
     </main>
   )
 }

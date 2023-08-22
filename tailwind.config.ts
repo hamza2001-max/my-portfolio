@@ -11,7 +11,7 @@ const config: Config = {
       textColor: {
         primary: "var(--color-primary)",
         secondary: "var(--color-secondary)",
-        fillText: "var(--color-fill-text)",
+        "fill-text": "var(--color-fill-text)",
       },
       backgroundColor: {
         primary: "var(--color-primary)",

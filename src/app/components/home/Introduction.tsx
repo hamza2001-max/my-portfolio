@@ -44,13 +44,13 @@ export const Introduction = () => {
   return (
     <div className='flex flex-col space-y-3'>
       <span className='text-4xl font-semibold'>Hamza Ali</span>
-      <span className='text-xl text-fillText'>Web Developer | Student</span>
+      <span className='text-xl text-fill-text'>Web Developer | Student</span>
       <span>Crafting online solutions with a blend of elegance and functionality.</span>
       <div className='text-2xl flex space-x-6 items-center'>
-        <a href={"https://github.com/hamza2001-max"} target="_blank" className='cursor-pointer'><FaGithub /></a>
-        <FiMail onClick={handleMailClick} className='cursor-pointer' />
+        <a href={"https://github.com/hamza2001-max"} target="_blank" className='cursor-pointer hover:text-fill-text transition-colors duration-200 delay-75'><FaGithub /></a>
+        <FiMail onClick={handleMailClick} className='cursor-pointer hover:text-fill-text transition-colors duration-200 delay-75' />
         <span>|</span>
-        <span onClick={handleThemeChanger} className='cursor-pointer'>{theme === "dark" ? <FiSun /> : <BiSolidMoon />}</span>
+        <span onClick={handleThemeChanger} className='cursor-pointer hover:text-fill-text transition-colors duration-200 delay-75'>{theme === "dark" ? <FiSun /> : <BiSolidMoon />}</span>
         <Toaster />
       </div>
     </div>
