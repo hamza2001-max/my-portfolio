@@ -16,7 +16,7 @@ export const PinnedCards = [
     link: "https://github.com/hamza2001-max/travel-planner-php",
   },
   {
-    duration: "Novasds-Dec 2022",
+    duration: "Nov-Dec 2022",
     title: "Week Planner",
     description:
       "A simple CRUD application for preplanning your week, by assigning different task across the week days.",

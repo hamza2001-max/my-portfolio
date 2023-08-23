@@ -9,10 +9,12 @@ export default function Home() {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <main className={`${theme} px-6 py-10 space-y-16 text-primary bg-secondary`}>
+    <main className={`${theme} px-6 py-10 md:px-10 md:py-14 lg:flex space-y-36 lg:space-y-0 text-primary bg-secondary`}>
       <Introduction />
-      <About />
-      <Projects />
+      <div className="space-y-36 lg:w-3/5">
+        <About />
+        <Projects />
+      </div>
     </main>
   )
 }
