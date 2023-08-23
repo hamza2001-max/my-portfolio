@@ -3,20 +3,13 @@ import { useEffect, useRef, useState } from "react";
 
 export default function useNavScroll() {
     const divRef = useRef<HTMLDivElement | null>(null);
-    const [display, setDisplay] = useState<"fixed" | "relative">("relative");
-
-    // const handleScroll = () => {
-    //     if (divRef.current) {
-    //         const { top, bottom } = divRef.current.getBoundingClientRect();
-    //         setDisplay(top <= 0 && bottom >= 0 ? "fixed" : "relative");
-    //     }
-    // };
+    const [isFixed, setIsFixed] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
             if (divRef.current) {
                 const { top, bottom } = divRef.current.getBoundingClientRect();
-                setDisplay(top <= 0 && bottom > 0 ? "fixed" : "relative");
+                setIsFixed(top <= 0 && bottom > 0 ? true : false);
             }
         };
 
@@ -26,5 +19,5 @@ export default function useNavScroll() {
         };
     }, []);
 
-    return { divRef, display };
+    return { divRef, isFixed };
 }

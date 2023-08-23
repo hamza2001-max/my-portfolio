@@ -1,15 +1,29 @@
+import { Dispatch, SetStateAction, useEffect } from "react";
 import { PinnedCards } from "@/app/data/ProjectCards"
 import { BiLink } from "react-icons/bi"
 import Link from "next/link"
 import Navigation from "../include/Navigation"
 import useNavScroll from "@/app/hooks/useNavScroll"
 
-export const Projects = () => {
-  const { display, divRef } = useNavScroll();
+export const Projects = ({ setScrollState }: {
+  setScrollState: Dispatch<SetStateAction<{
+    aboutState: boolean;
+    projectState: boolean;
+  }>>
+}) => {
+  const { isFixed, divRef } = useNavScroll();
+  useEffect(() => {
+    if (isFixed === true) {
+        setScrollState({
+            aboutState: false,
+            projectState: true
+        })
+    }
+}, [isFixed, setScrollState]);
 
   return (
-    <div ref={divRef} className="space-y-7 lg:space-y-0">
-      <Navigation title="PROJECTS" display={display} />
+    <div ref={divRef} className="space-y-12 lg:space-y-0">
+      <Navigation title="PROJECTS" isFixed={isFixed} />
       {PinnedCards.map((card, cardIndex) => {
         return (
           <div className="flex flex-col sm:flex-row py-5 sm:py-3" key={cardIndex}>
@@ -29,7 +43,7 @@ export const Projects = () => {
           </div>
         )
       })}
-      <div className="text-highlighter"><Link href={"/archive"}>Explore the archive</Link></div>
+      <div className="text-highlighter lg:pt-44"><Link href={"/archive"}>Explore the archive</Link></div>
     </div>
   )
 }

@@ -5,9 +5,17 @@ import { BiSolidMoon } from 'react-icons/bi';
 import { useContext } from 'react';
 import { ThemeContext } from '@/app/ContextProvider';
 import toast, { Toaster } from 'react-hot-toast';
+import useNavScroll from '@/app/hooks/useNavScroll';
 
-export const Introduction = () => {
+export const Introduction = ({ scrollState }: {
+  scrollState: {
+    aboutState: boolean;
+    projectState: boolean;
+  }
+}) => {
   const { theme, setTheme } = useContext(ThemeContext);
+  const { isFixed } = useNavScroll();
+
   const handleMailClick = () => {
     try {
       toast.success("The Email has been copied to the clipboard.", {
@@ -46,8 +54,8 @@ export const Introduction = () => {
         <span className='text-xl text-highlighter'>Web Developer | Student</span>
         <span>Crafting online solutions with a blend of elegance and functionality.</span>
         <div className='hidden lg:flex lg:flex-col lg:space-y-3 lg:py-6'>
-          <span>ABOUT</span>
-          <span>PROJECTS</span>
+          <span className={`${scrollState.aboutState && "bg-slate-200"}`}>ABOUT</span>
+          <span className={`${scrollState.projectState && "bg-slate-200"}`}>PROJECTS</span>
         </div>
         <div className='text-2xl flex space-x-6 items-center'>
           <a href={"https://github.com/hamza2001-max"} target="_blank" className='cursor-pointer hover:text-highlighter transition-colors duration-200 delay-75'><FaGithub /></a>
