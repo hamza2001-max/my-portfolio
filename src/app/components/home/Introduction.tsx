@@ -5,7 +5,6 @@ import { BiSolidMoon } from 'react-icons/bi';
 import { useContext } from 'react';
 import { ThemeContext } from '@/app/ContextProvider';
 import toast, { Toaster } from 'react-hot-toast';
-import useNavScroll from '@/app/hooks/useNavScroll';
 
 export const Introduction = ({ scrollState }: {
   scrollState: {
@@ -14,7 +13,6 @@ export const Introduction = ({ scrollState }: {
   }
 }) => {
   const { theme, setTheme } = useContext(ThemeContext);
-  const { isFixed } = useNavScroll();
 
   const handleMailClick = () => {
     try {
@@ -51,11 +49,17 @@ export const Introduction = ({ scrollState }: {
     <div className='lg:w-2/5 '>
       <div className='flex flex-col space-y-3 lg:fixed lg:w-1/3 '>
         <span className='text-4xl font-semibold'>Hamza Ali</span>
-        <span className='text-xl text-highlighter'>Web Developer | Student</span>
+        <span className={`text-xl ${theme === "dark" && "text-highlighter"}`}>Web Developer | Student</span>
         <span>Crafting online solutions with a blend of elegance and functionality.</span>
         <div className='hidden lg:flex lg:flex-col lg:space-y-3 lg:py-6'>
-          <span className={`${scrollState.aboutState && "bg-slate-200"}`}>ABOUT</span>
-          <span className={`${scrollState.projectState && "bg-slate-200"}`}>PROJECTS</span>
+          <div className="flex items-center space-x-2">
+            <div className={`${scrollState.aboutState ? "bg-highlighter w-16" : "bg-primary w-7"} h-[0.12rem] rounded-md transition-all duration-200 delay-75`}></div>
+            <span className={`${scrollState.aboutState && "text-highlighter"}`}>PROJECTS</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <div className={`${scrollState.projectState ? "bg-highlighter w-16" : "bg-primary w-7"} h-[0.12rem] rounded-md transition-all duration-200 delay-75`}></div>
+            <span className={`${scrollState.projectState && "text-highlighter"}`}>PROJECTS</span>
+          </div>
         </div>
         <div className='text-2xl flex space-x-6 items-center'>
           <a href={"https://github.com/hamza2001-max"} target="_blank" className='cursor-pointer hover:text-highlighter transition-colors duration-200 delay-75'><FaGithub /></a>

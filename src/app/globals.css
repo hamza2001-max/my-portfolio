@@ -8,8 +8,9 @@
     --color-secondary: #fff;
     --color-fill: #d1d5db;
     --color-faded: #b4b9c1;
+    --color-highlighter: #56595e;
   }
-  
+
   .dark {
     --color-primary: #fff;
     --color-secondary: #020e21;

@@ -18,6 +18,7 @@ const config: Config = {
         primary: "var(--color-primary)",
         secondary: "var(--color-secondary)",
         fill: "var(--color-fill)",
+        highlighter: "var(--color-highlighter)",
       },
     },
   },

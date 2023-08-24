@@ -1,4 +1,4 @@
-export const PinnedCards = [
+export const projectData = [
   {
     duration: "Apr-Aug 2023",
     title: "Test Typing",

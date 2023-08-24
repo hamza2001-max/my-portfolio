@@ -9,7 +9,7 @@ export default function useNavScroll() {
         const handleScroll = () => {
             if (divRef.current) {
                 const { top, bottom } = divRef.current.getBoundingClientRect();
-                setIsFixed(top <= 0 && bottom > 0 ? true : false);
+                setIsFixed(top <= 0 && bottom > 50 ? true : false);
             }
         };
 
