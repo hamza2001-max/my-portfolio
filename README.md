@@ -1,6 +1,7 @@
 # Portfolio Website
 
 This Page showcases my skills, projects and achievement.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Table of Contents
 
@@ -19,5 +20,3 @@ This portfolio website serves as a platform to highlight my professional journey
 
 ## Contact Me
 If interested in hiring me, then contact me through the email provided in the website.
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
