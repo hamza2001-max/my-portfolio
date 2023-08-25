@@ -2,13 +2,13 @@ export const archiveData = [
   {
     year: "2022",
     title: "blog",
-    builtWith: ["MERN"],
+    builtWith: ["MERN", "css"],
     link: "https://github.com/hamza2001-max/blog-mern",
   },
   {
     year: "2022",
     title: "Travel Journal",
-    builtWith: ["react"],
+    builtWith: ["react", "css"],
     link: "https://github.com/hamza2001-max/travel-journal-react",
   },
   {
