@@ -1,3 +1,4 @@
+"use client"
 import { useEffect, Dispatch, SetStateAction } from "react";
 import Navigation from "../include/Navigation";
 import useNavScroll from "@/app/hooks/useNavScroll";
@@ -9,7 +10,7 @@ export const About = ({ setScrollState }: {
     }>>
 }) => {
     const { isFixed, divRef } = useNavScroll();
-    
+
     useEffect(() => {
         if (isFixed === true) {
             setScrollState({

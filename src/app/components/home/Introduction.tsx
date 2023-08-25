@@ -1,4 +1,3 @@
-"use client";
 import { FaGithub } from 'react-icons/fa';
 import { FiMail, FiSun } from 'react-icons/fi';
 import { BiSolidMoon } from 'react-icons/bi';
