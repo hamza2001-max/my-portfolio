@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+.container {
+    @apply mx-auto max-w-[1366px] w-full px-5 lg:px-24 md:px-12;
+}
+
+/* .navbar-container {
+    @apply mx-auto max-w-[1366px] w-full px-5 md:px-8;
+}
+
+.dashboard-container {
+    @apply mx-auto max-w-[1566px] w-full px-5 lg:px-36 md:px-12;
+} */
