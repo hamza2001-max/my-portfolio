@@ -47,7 +47,7 @@ export const Introduction = ({ scrollState }: {
   return (
     <div className='lg:w-2/5 '>
       <div className='flex flex-col space-y-3 lg:fixed lg:w-1/3 '>
-        <span className='text-4xl font-semibold'>Hamza Ali</span>
+        <span className='text-4xl font-semibold'>Hamza Ali | This page is underdevelopment</span>
         <span className={`text-xl ${theme === "dark" && "text-highlighter"}`}>Web Developer | Student</span>
         <span>Crafting online solutions with a blend of elegance and functionality.</span>
         <div className='hidden lg:flex lg:flex-col lg:space-y-3 lg:py-6'>

@@ -11,7 +11,7 @@ const josefinSans = Poppins({
 
 export const metadata: Metadata = {
   title: 'Hamza Ali',
-  description: 'A Portfolio Website by Hamza Ali.',
+  description: 'A Portfolio Website by Hamza Ali.'
 }
 
 export default function RootLayout({
