@@ -1,15 +1,15 @@
-import Image from "next/image";
-import React from "react";
+import ImageComponent from "./ImageComponent";
 
 const Introduction = () => {
+
   return (
     <section className="my-5">
       <div className="border-b-2 border-black pb-8">
-        <div className="w sm:w-[530px] space-y-3">
+        <div className="w-full sm:w-[530px] space-y-3">
           <h2 className="text-2xl">Full Stack Developer</h2>
           <p className="text-lg">
             Experienced in working with frameworks like Next.js and Laravel.
-            Over time, I’ve worked across a wide range of technology stacks,
+            Over time, I&apos;ve worked across a wide range of technology stacks,
             including the MERN stack.
           </p>
         </div>
@@ -32,13 +32,7 @@ const Introduction = () => {
           </p>
           <p>I live in Peshawar.</p>
         </div>
-        <Image
-          src="/images/hamza_prop.jpeg"
-          alt="Hamza Ali"
-          width={200}
-          height={200}
-          className="h-fit w-[340px] sm:w-[560px] mx-auto my-auto lg:h-[500px] lg:w-[500px] xl:w-[560px] xl:h-[560px] object-contain"
-        />
+        <ImageComponent/>
       </div>
     </section>
   );
