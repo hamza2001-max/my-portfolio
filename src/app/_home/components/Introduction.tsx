@@ -8,7 +8,7 @@ const Introduction = () => {
         <div className="w sm:w-[530px] space-y-3">
           <h2 className="text-2xl">Full Stack Developer</h2>
           <p className="text-lg">
-            I have experience working with frameworks like Next.js and Laravel.
+            Experienced in working with frameworks like Next.js and Laravel.
             Over time, I’ve worked across a wide range of technology stacks,
             including the MERN stack.
           </p>
