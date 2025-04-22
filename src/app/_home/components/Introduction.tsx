@@ -6,7 +6,7 @@ const Introduction = () => {
     <section className="my-5">
       <div className="border-b-2 border-black pb-8">
         <div className="w-full sm:w-[530px] space-y-3">
-          <h2 className="text-2xl">Full Stack Developer</h2>
+          <h2 className="text-lg font-medium">Full Stack Developer</h2>
           <p className="text-lg">
             Experienced in working with frameworks like Next.js and Laravel.
             Over time, I&apos;ve worked across a wide range of technology stacks,
